@@ -1,0 +1,210 @@
+/* declaramos fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+  --main-color: hsl(216, 12%, 8%);
+  --container-color: hsl(213, 19%, 18%);
+  --container-color2: rgb(24, 31, 41);
+  --letter-color: hsl(0, 0%, 100%);
+  --p-color: hsl(217, 12%, 63%);
+  --button-color1: hsl(216, 12%, 54%);
+  --button-color2: hsl(25, 97%, 53%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-color);
+  font-family: "Overpass";
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+/* estilos principales → container */
+
+#container,
+#state-thank {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--container-color2);
+  padding: 2em;
+  height: 400px;
+  width: 400px;
+  border-radius: 25px;
+}
+
+#icon_star {
+
+  background-image: url(./images/icon-star.svg);  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--container-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 180px;
+}
+
+#section h1 {
+  color: var(--letter-color);
+}
+
+#section p {
+  color: var(--p-color);
+  letter-spacing: 1px;
+  line-height: 2;
+}
+
+#target {
+  gap: 6px;
+  display: flex;
+  align-self: center;
+}
+
+.number_target {
+  background-color: var(--container-color);
+  width: 50px;
+  height: 50px;
+  color: var(--p-color);
+  border-radius: 180px;
+  margin: 5px;
+  border: none;
+}
+
+.number_target:hover {
+  background-color: var(--p-color);
+  color: var(--letter-color);
+  cursor: pointer;
+}
+.number_target:focus {
+  background-color: var(--button-color2);
+  color: var(--letter-color);
+}
+
+.button-send {
+  
+  margin: 20px auto;
+  background-color: var(--button-color2);
+  height: 45px;
+  width: 90%;
+  border-radius: 50px;
+  box-shadow: none;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-align: center;
+  border: none;
+  
+}
+
+.button-send:hover {
+  background-color: var(--letter-color);
+  color: var(--button-color2);
+  cursor: pointer;
+  
+}
+footer{
+  position: absolute;
+  bottom: 0;
+  color: white;
+}
+footer a{
+  color: var(--button-color2);
+  font-weight: 100;
+}
+/* estilos index-state */
+#state-thank {
+  align-items: center;
+}
+
+#state-thank {
+  display: none;
+}
+
+.state-image {
+    background-image: url(./images/illustration-thank-you.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 163px;
+    height: 163px;
+    
+    
+}
+
+.select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: var(--container-color);
+  padding: 7px 14px;
+  border-radius: 25px;
+  color: var(--button-color2);
+}
+
+#text-thank h1 {
+  color: var(--letter-color);
+  text-align: center;
+  margin-top: 25px;
+}
+
+.text-p p {
+  color: var(--p-color);
+  line-height: 1.5;
+  letter-spacing: 1px;
+  padding: 5px;
+  text-align: center;
+}
+.home{
+  border: 0;
+  background : none;
+  color: transparent;
+  
+  cursor: pointer;
+}
+
+
+/* media query */
+@media (max-width: 375px) {
+  #container,
+  #state-thank {
+    width: 325px;
+    
+  }
+
+  #icon_star {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    margin-top:5px ;
+    margin-top: -17px;
+    
+
+    border-radius: 30px;
+  }
+  #target {
+    gap: 0px;
+  }
+  .number_target {
+    width: 45px;
+    height: 45px;
+  }
+  .button-send {
+    width: 100%;
+    height: 40px;
+  }
+  
+}
+
+
+
+
